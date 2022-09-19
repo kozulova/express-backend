@@ -6,6 +6,7 @@
   - [Development Environment](#development-environment)
   - [Docker Environment](#docker-environment)
 - [Testing](#testing)
+- [Benchmark test](#benchmark-test)
 
 ## Structure
 
@@ -69,4 +70,12 @@ Fill in the .env.test.local environment file
 ```bash
 # unit tests
 $ yarn run test
+```
+
+## Benchmark test
+
+[Apache benchmark for docker](https://hub.docker.com/r/jordi/ab)
+
+```bash
+$ docker run --rm jordi/ab -k -c 100 -n 10000 http://172.17.0.1:3000/articles/
 ```

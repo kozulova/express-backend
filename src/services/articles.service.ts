@@ -1,9 +1,9 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { CreateArticleDto } from '@/dtos/articles.dto';
-import { ArticleEntity } from '@/entities/articles.entity';
-import { HttpException } from '@exceptions/HttpException';
-import { Article } from '@interfaces/articles.interface';
-import { isEmpty } from '@utils/util';
+import { CreateArticleDto } from '../dtos/articles.dto';
+import { ArticleEntity } from '../entities/articles.entity';
+import { HttpException } from '../exceptions/HttpException';
+import { Article } from '../interfaces/articles.interface';
+import { isEmpty } from '../utils/util';
 
 @EntityRepository()
 class ArticleService extends Repository<ArticleEntity> {

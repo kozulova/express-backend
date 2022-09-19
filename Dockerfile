@@ -1,24 +1,13 @@
 # Common build stage
-FROM node:14.14.0-alpine3.12 as common-build-stage
+FROM node:14.17.0
 
-COPY . ./app
+COPY package.json ./
 
-WORKDIR /app
+RUN yarn install --production
 
-RUN npm install
-
-EXPOSE 3000
-
-# Development build stage
-FROM common-build-stage as development-build-stage
-
-ENV NODE_ENV development
-
-CMD ["npm", "run", "dev"]
-
-# Production build stage
-FROM common-build-stage as production-build-stage
-
+COPY dist ./dist
+COPY .env.production.local ./
 ENV NODE_ENV production
 
-CMD ["npm", "run", "start"]
+EXPOSE 3000
+CMD ["yarn", "run", "start"]

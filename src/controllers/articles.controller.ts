@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { CreateArticleDto } from '@/dtos/articles.dto';
-import { Article } from '@interfaces/articles.interface';
-import articleService from '@services/articles.service';
+import { CreateArticleDto } from '../dtos/articles.dto';
+import { Article } from '../interfaces/articles.interface';
+import articleService from '../services/articles.service';
 
 class ArticlesController {
   public articleService = new articleService();

@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import ArticlesController from '@controllers/articles.controller';
-import { CreateArticleDto } from '@/dtos/articles.dto';
-import { Routes } from '@interfaces/routes.interface';
-import validationMiddleware from '@middlewares/validation.middleware';
+import ArticlesController from '../controllers/articles.controller';
+import { CreateArticleDto } from '../dtos/articles.dto';
+import { Routes } from '../interfaces/routes.interface';
+import validationMiddleware from '../middlewares/validation.middleware';
 
 class ArticlesRoute implements Routes {
   public path = '/articles';

@@ -4,6 +4,7 @@
 - [Prerequisites](#prerequisites)
 - [Supported Environments](#supported-environments)
   - [Development Environment](#development-environment)
+  - [Docker Environment](#docker-environment)
 - [Testing](#testing)
 
 ## Structure
@@ -43,6 +44,14 @@ Fill in the .env.development.local environment file
 ```bash
 # watch development mode
 $ yarn run dev
+```
+
+### Docker environment
+
+Run docker container
+
+```bash
+$docker run --name express -p 3000:3000 -e -d express
 ```
 
 ### Production Environment

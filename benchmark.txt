@@ -1,0 +1,36 @@
+Server Software:
+Server Hostname:        172.17.0.1
+Server Port:            3000
+
+Document Path:          /articles/
+Document Length:        112 bytes
+
+Concurrency Level:      100
+Time taken for tests:   9.141 seconds
+Complete requests:      10000
+Failed requests:        0
+Keep-Alive requests:    10000
+Total transferred:      3480000 bytes
+HTML transferred:       1120000 bytes
+Requests per second:    1093.93 [#/sec] (mean)
+Time per request:       91.414 [ms] (mean)
+Time per request:       0.914 [ms] (mean, across all concurrent requests)
+Transfer rate:          371.76 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       3
+Processing:    18   91  49.8     79     546
+Waiting:       16   91  49.8     79     546
+Total:         18   91  49.9     79     547
+
+Percentage of the requests served within a certain time (ms)  
+  50%     79
+  66%     88
+  75%     93
+  80%    104
+  90%    126
+  95%    164
+  98%    201
+  99%    284
+ 100%    547 (longest request)
